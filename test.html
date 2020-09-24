@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script type="text/javascript" src="http://47.107.246.149:8082/wp-content/themes/Sakura/js/jquery.js" /></script>
+<meta charset="UTF-8">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title itemprop="name">Sibeit&#039;s Homepage - Just for FUN</title>
+<meta name="description" content="个人blogです～" />
+<meta name="keywords" content="Sibeit's Blog" />
+<link rel="shortcut icon" href="/wp-content/themes/Sakura/images/favicon.ico"/> 
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://47.107.246.149:8082/wp-includes/css/dist/block-library/style.min.css?ver=5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='Emojify.js-css'  href='https://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.8/assets/Emojify.js/css/basic/emojify.min.css?ver=10.0.8' type='text/css' media='all' />
+<link rel='stylesheet' id='saukra_css-css'  href='https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.3.2/style.min.css?ver=3.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://47.107.246.149:8082/wp-content/themes/Sakura/font-awesome/css/font-awesome.min.css?ver=5.3' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='http://47.107.246.149:8082/wp-content/themes/Sakura/font-awesome/css/font-awesome-ie7.min.css?ver=5.3' type='text/css' media='all' />
+<![endif]-->
+<link rel='https://api.w.org/' href='http://47.107.246.149:8082/index.php/wp-json/' />
+<!-- Analytics by WP-Statistics v12.6.11 - https://wp-statistics.com/ -->
+<style type="text/css">
+.site-top .lower nav {display: block !important;}
+.author-profile i , .post-like a , .post-share .show-share , .sub-text , .we-info a , span.sitename , .post-more i:hover , #pagination a:hover , .post-content a:hover , .float-content i:hover{ color: #FE9600 }
+.feature i , /*.feature-title span ,*/ .download , .navigator i:hover , .links ul li:before , .ar-time i , span.ar-circle , .object , .comment .comment-reply-link , .siren-checkbox-radio:checked + .siren-checkbox-radioInput:after { background: #FE9600 }
+::-webkit-scrollbar-thumb { background: #FE9600 }
+.download , .navigator i:hover , .link-title , .links ul li:hover , #pagination a:hover , .comment-respond input[type='submit']:hover { border-color: #FE9600 }
+.entry-content a:hover , .site-info a:hover , .comment h4 a , #comments-navi a.prev , #comments-navi a.next , .comment h4 a:hover , .site-top ul li a:hover , .entry-title a:hover , #archives-temp h3 , span.page-numbers.current , .sorry li a:hover , .site-title a:hover , i.iconfont.js-toggle-search.iconsearch:hover , .comment-respond input[type='submit']:hover, blockquote:before, blockquote:after { color: #FE9600 }
+
+#aplayer-float .aplayer-lrc-current { color: #FE9600 !important}
+
+.is-active-link::before, .commentbody:not(:placeholder-shown)~.input-label, .commentbody:focus~.input-label {
+    background-color: #FE9600 !important
+}
+
+.commentbody:focus {
+    border-color: #FE9600 !important
+}
+
+.insert-image-tips:hover, .insert-image-tips-hover{ 
+    color: #FE9600;
+    border: 1px solid #FE9600}
+
+.site-top ul li a:after {
+    background-color: #FE9600}
+
+.scrollbar,.butterBar-message {
+    background: #FE9600 !important
+}
+
+#nprogress .spinner-icon{ 
+    border-top-color: #FE9600; 
+    border-left-color: #FE9600}
+
+#nprogress .bar {
+    background: #FE9600}
+
+.changeSkin-gear,.toc{
+    background:rgba(255,255,255,0.8);
+}
+
+.entry-content th {
+    background-color: #FE9600}
+
+.widget-area {
+display:none;
+}.comments .comments-main {display:block !important;}
+.comments .comments-hidden {display:none !important;}
+.centerbg{background-image: url("http://47.107.246.149:8082/wp-content/themes/Sakura/cover/index.php");background-position: center center;background-attachment: inherit;}
+.rotating {
+    -webkit-animation: rotating 6s linear infinite;
+    -moz-animation: rotating 6s linear infinite;
+    -ms-animation: rotating 6s linear infinite;
+    -o-animation: rotating 6s linear infinite;
+    animation: rotating 6s linear infinite;
+}
+</style>
+<script>
+/*Initial Variables*/
+var mashiro_option = new Object();
+var mashiro_global = new Object();
+mashiro_option.NProgressON = false;
+mashiro_option.email_domain = "";
+mashiro_option.email_name = "";
+mashiro_option.cookie_version_control = "";
+mashiro_option.qzone_autocomplete = false;
+mashiro_option.site_name = "Sibeit's Blog";
+mashiro_option.author_name = "Sibeit";
+mashiro_option.template_url = "http://47.107.246.149:8082/wp-content/themes/Sakura";
+mashiro_option.site_url = "http://47.107.246.149:8082";
+mashiro_option.qq_api_url = "https://api.2heng.xin/qqinfo/"; 
+mashiro_option.qq_avatar_api_url = "https://api.2heng.xin/qqinfo/";
+mashiro_option.live_search = false;
+
+mashiro_option.skin_bg0 = "none";
+mashiro_option.skin_bg1 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/sakura.png";
+mashiro_option.skin_bg2 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/plaid2dbf8.jpg";
+mashiro_option.skin_bg3 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/star02.png";
+mashiro_option.skin_bg4 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/kyotoanimation.png";
+mashiro_option.skin_bg5 = "https://cdn.jsdelivr.net/gh/spirit1431007/cdn@1.6/img/dot_orange.gif";
+mashiro_option.skin_bg6 = "https://api.mashiro.top/bing/";
+mashiro_option.skin_bg7 = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.2/other-sites/api-index/images/me.png";
+
+mashiro_option.land_at_home = true;
+
+mashiro_option.baguetteBoxON = false;
+
+mashiro_option.clipboardCopyright = true;
+
+mashiro_option.entry_content_theme_src = "http://47.107.246.149:8082/wp-content/themes/Sakura/cdn/theme/sakura.css?3.3.2";
+mashiro_option.entry_content_theme = "sakura";
+
+mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.3.2/cdn/css/lib.min.css";
+mashiro_option.float_player_on = true;
+
+mashiro_option.cover_api = "http://47.107.246.149:8082/wp-content/themes/Sakura/cover/index.php";
+
+/*End of Initial Variables*/
+</script>
+<script type="text/javascript">
+if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+  alert('朋友，IE浏览器未适配哦~\n如果是 360、QQ 等双核浏览器，请关闭 IE 模式！');
+}
+</script>
+</head>
+<body class="home blog group-blog hfeed chinese-font">
+        		<div class="scrollbar" id="bar"></div>
+	<section id="main-container">
+				<div class="headertop filter-dim">
+			<figure id="centerbg" class="centerbg">
+	<div class="focusinfo">
+                <h1 class="center-text glitch is-glitching Ubuntu-font" data-text="Sibeit's Blog">Sibeit's Blog</h1>
+   				<div class="header-info">
+            <p>一去紫台连朔漠，独留青冢向黄昏。</p>
+                        <div class="top-social_v2">
+                <li id="bg-pre"><img class="flipx" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg"/></li>
+                                <li><a href="https://github.com/Sibeit" target="_blank" class="social-github" title="github"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/github.png"/></a></li>
+                	
+                                <li><a href="https://weibo.com/6210211867/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" class="social-sina" title="sina"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/sina.png"/></a></li>
+                                	
+                                <li class="qq"><a href="tencent://message/?uin=1123640734" title="Initiate chat ?"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/qq.png"/></a></li>
+                	
+                                 
+                	
+                                                                <li><a href="https://music.163.com/#/user/home?id=402361668" target="_blank" class="social-wangyiyun" title="CloudMusic"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wangyiyun.png"/></a></li>
+                                                <li><a href="https://Twitter.com/Sibeit" target="_blank" class="social-wangyiyun" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/twitter.png"/></a></li>
+                	
+                	
+                                                                <li><a href="https://www.zhihu.com/people/sibeit-99/" target="_blank" class="social-wangyiyun" title="Zhihu"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/zhihu.png"/></a></li>
+                	
+                		
+                	
+                <li id="bg-next"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/next-b.svg"/></li>	
+            </div>
+                    </div>
+        	</div>
+	</figure>
+<div id="video-container" style="display:none;"><video id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto"></video><div id="video-btn" class="loadvideo videolive"></div><div id="video-add"></div><div class="video-stu"></div></div>		</div>	
+				<div id="page" class="site wrapper">
+			<header class="site-header no-select" role="banner">
+				<div class="site-top">
+					<div class="site-branding">
+												<span class="site-title">
+							<span class="logolink serif">
+								<a href="http://47.107.246.149:8082">
+									<span class="site-name">Sibeit's Blog</span>
+								</a>
+							</span>
+						</span>	
+						<!-- logo end -->
+					</div><!-- .site-branding -->
+					  <div class="header-user-avatar">
+    <a href="http://47.107.246.149:8082/wp-login.php">
+      <img class="faa-shake animated-hover" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/none.png" width="30" height="30">
+    </a>
+    <div class="header-user-menu">
+      <div class="herder-user-name no-logged">Whether to <a href="http://47.107.246.149:8082/wp-login.php" target="_blank" style="color:#333;font-weight:bold;text-decoration:none">log in</a> now?
+      </div>
+    </div>
+  </div>
+  					<div class="searchbox"><i class="iconfont js-toggle-search iconsearch icon-search"></i></div>
+										<div class="lower">						<nav><div class="menu"><ul>
+<li><a href="http://47.107.246.149:8082/index.php/about/">About</a></li>
+</ul></div>
+</nav><!-- #site-navigation -->
+					</div>	
+				</div>
+			</header><!-- #masthead -->
+			<div class="blank"></div>		    <div id="content" class="site-content">
+   
+   	
+	<div class="top-feature-row">
+    <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-anchor" aria-hidden="true"></i> 聚焦</h1>
+    <div class="top-feature-v2">
+        <div class="the-feature square from_left_and_right">
+            <a href="#" target="_blank">
+                <div class="img"><img src="http://47.107.246.149:8082/wp-content/themes/Sakura/images//潮起潮落，静盼黎明。.png"></div>
+                <div class="info">
+                    <h3>Waiting</h3>
+                    <p>潮起潮落，静盼黎明。</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="top-feature-v2">
+        <div class="the-feature square from_left_and_right" style="margin: 0 4.5px">
+            <a href="#" target="_blank">
+                <div class="img"><img src="http://47.107.246.149:8082/wp-content/themes/Sakura/images//仰望星空也成了一种奢侈.png"></div>
+                <div class="info">
+                    <h3>Stars</h3>
+                    <p>仰望星空也成了一种奢侈</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="top-feature-v2">
+        <div class="the-feature square from_left_and_right">
+            <a href="#" target="_blank">
+                <div class="img"><img src="http://47.107.246.149:8082/wp-content/themes/Sakura/images//人总分不清梦境与现实。.png"></div>
+                <div class="info">
+                    <h3>Dream</h3>
+                    <p>人总分不清梦境与现实</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+	
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">	
+		<h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;"><i class="fa fa-envira" aria-hidden="true"></i> Discovery</h1>
+			<article class="post post-list-thumb " itemscope="" itemtype="http://schema.org/BlogPosting">
+		<div class="post-thumb">
+			<a href="http://47.107.246.149:8082/index.php/2020/09/01/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e8%af%ad%e8%a8%80/"><img class="lazyload" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg" data-src="http://47.107.246.149:8082/wp-content/themes/Sakura/feature/index.php?332"></a>
+		</div><!-- thumbnail-->
+		<div class="post-content-wrap">
+			<div class="post-content">
+				<div class="post-date">
+					<i class="iconfont icon-time"></i>发布于 23 天前									</div>
+				<a href="http://47.107.246.149:8082/index.php/2020/09/01/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e8%af%ad%e8%a8%80/" class="post-title"><h3>mysql数据库语言</h3></a>
+				<div class="post-meta">
+					<span><i class="iconfont icon-attention"></i>31 热度</span>
+					<span class="comments-number"><i class="iconfont icon-mark"></i><a href="http://47.107.246.149:8082/index.php/2020/09/01/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e8%af%ad%e8%a8%80/#comments">1 条评论</a></span>
+					<span><i class="iconfont icon-file"></i><a href="http://47.107.246.149:8082/uncategorized/">未分类</a>
+					</span>
+				</div>
+				<div class="float-content">
+					<p>1.数据库操作 2.数据表操作 3.修改表 数据库操作 选择数据库 use 数据库名; 查看数据库 show databases; &#8230;</p>					<div class="post-bottom">
+						<a href="http://47.107.246.149:8082/index.php/2020/09/01/mysql%e6%95%b0%e6%8d%ae%e5%ba%93%e8%af%ad%e8%a8%80/" class="button-normal"><i class="iconfont icon-caidan"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="post post-list-thumb post-list-thumb-left" itemscope="" itemtype="http://schema.org/BlogPosting">
+		<div class="post-thumb">
+			<a href="http://47.107.246.149:8082/index.php/2019/12/07/css-%e7%9b%92%e5%ad%90%e6%a8%a1%e5%9e%8b%e5%ba%94%e7%94%a8/"><img class="lazyload" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg" data-src="http://47.107.246.149:8082/wp-content/themes/Sakura/feature/index.php?698"></a>
+		</div><!-- thumbnail-->
+		<div class="post-content-wrap">
+			<div class="post-content">
+				<div class="post-date">
+					<i class="iconfont icon-time"></i>发布于 2019-12-07									</div>
+				<a href="http://47.107.246.149:8082/index.php/2019/12/07/css-%e7%9b%92%e5%ad%90%e6%a8%a1%e5%9e%8b%e5%ba%94%e7%94%a8/" class="post-title"><h3>CSS 盒子模型应用</h3></a>
+				<div class="post-meta">
+					<span><i class="iconfont icon-attention"></i>86 热度</span>
+					<span class="comments-number"><i class="iconfont icon-mark"></i><a href="http://47.107.246.149:8082/index.php/2019/12/07/css-%e7%9b%92%e5%ad%90%e6%a8%a1%e5%9e%8b%e5%ba%94%e7%94%a8/#respond">NOTHING</a></span>
+					<span><i class="iconfont icon-file"></i><a href="http://47.107.246.149:8082/study/">HTML笔记</a>
+					</span>
+				</div>
+				<div class="float-content">
+					<p>1. 盒子的基本概念 所有的HTML元素都可以看作盒子。CSS中，&#8221;盒子模型&#8221;这一术语是用来设计和布局时使用。 CSS盒模型本质上					<div class="post-bottom">
+						<a href="http://47.107.246.149:8082/index.php/2019/12/07/css-%e7%9b%92%e5%ad%90%e6%a8%a1%e5%9e%8b%e5%ba%94%e7%94%a8/" class="button-normal"><i class="iconfont icon-caidan"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<article class="post post-list-thumb " itemscope="" itemtype="http://schema.org/BlogPosting">
+		<div class="post-thumb">
+			<a href="http://47.107.246.149:8082/index.php/2019/11/28/%e8%b0%88%e4%b8%80%e8%b0%88css%e7%9a%84%e9%80%89%e6%8b%a9%e4%b8%8e%e4%bc%aa%e7%b1%bb/"><img class="lazyload" src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg" data-src="http://47.107.246.149:8082/wp-content/themes/Sakura/feature/index.php?744"></a>
+		</div><!-- thumbnail-->
+		<div class="post-content-wrap">
+			<div class="post-content">
+				<div class="post-date">
+					<i class="iconfont icon-time"></i>发布于 2019-11-28									</div>
+				<a href="http://47.107.246.149:8082/index.php/2019/11/28/%e8%b0%88%e4%b8%80%e8%b0%88css%e7%9a%84%e9%80%89%e6%8b%a9%e4%b8%8e%e4%bc%aa%e7%b1%bb/" class="post-title"><h3>谈一谈CSS的选择与伪类</h3></a>
+				<div class="post-meta">
+					<span><i class="iconfont icon-attention"></i>234 热度</span>
+					<span class="comments-number"><i class="iconfont icon-mark"></i><a href="http://47.107.246.149:8082/index.php/2019/11/28/%e8%b0%88%e4%b8%80%e8%b0%88css%e7%9a%84%e9%80%89%e6%8b%a9%e4%b8%8e%e4%bc%aa%e7%b1%bb/#comments">1 条评论</a></span>
+					<span><i class="iconfont icon-file"></i><a href="http://47.107.246.149:8082/study/">HTML笔记</a>
+					</span>
+				</div>
+				<div class="float-content">
+					<p>1. css选择器 2. 伪类 css选择器 1.标签选择器 以HTML标签作为选择器 通过标签选择器设置样式，即所有使用该标签的 &#8230;</p>					<div class="post-bottom">
+						<a href="http://47.107.246.149:8082/index.php/2019/11/28/%e8%b0%88%e4%b8%80%e8%b0%88css%e7%9a%84%e9%80%89%e6%8b%a9%e4%b8%8e%e4%bc%aa%e7%b1%bb/" class="button-normal"><i class="iconfont icon-caidan"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+				</main><!-- #main -->
+				<div id="pagination"></div>
+		<div id="add_post"><span id="add_post_time" style="visibility: hidden;" title="233"  ></span></div>
+			</div><!-- #primary -->
+	</div><!-- #content -->
+		</div><!-- #page Pjax container-->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info" theme-info="Sakura v3.3.2">
+			<div class="footertext">
+				<div class="img-preload">
+					<img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/wordpress-rotating-ball-o.svg">
+					<img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/disqus-preloader.svg">
+				</div>
+				<p style="color: #666666;">Copyright &copy; by Sibeit All Rights Reserved.</p>
+			</div>
+			<div class="footer-device">
+			<p style="font-family: 'Ubuntu', sans-serif;">
+					<span style="color: #b9b9b9;">
+												Blog<a href="http://47.107.246.149:8082/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="http://47.107.246.149:8081/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sibeit</a>
+					</span>
+				</p>
+			</div>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+	<div class="openNav no-select">
+		<div class="iconflat no-select">	 
+			<div class="icon"></div>
+		</div>
+		<div class="site-branding">
+						<h1 class="site-title"><a href="http://47.107.246.149:8082" >Sibeit&#039;s Homepage</a></h1>
+					</div>
+	</div><!-- m-nav-bar -->
+	</section><!-- #section -->
+	<!-- m-nav-center -->
+	<div id="mo-nav">
+		<div class="m-avatar">
+						<img src="http://47.107.246.149:8082/wp-content/themes/Sakura/images/avatar.jpg">
+		</div>
+		<div class="m-search">
+			<form class="m-search-form" method="get" action="http://47.107.246.149:8082" role="search">
+				<input class="m-search-input" type="search" name="s" placeholder="搜索..." required>
+			</form>
+		</div>
+		<div class="menu"><ul>
+<li><a href="http://47.107.246.149:8082/index.php/about/">About</a></li>
+</ul></div>
+	</div><!-- m-nav-center end -->
+	<a class="cd-top faa-float animated "></a>
+	<button onclick="topFunction()" id="moblieGoTop" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+	<!-- search start -->
+	<form class="js-search search-form search-form--modal" method="get" action="http://47.107.246.149:8082" role="search">
+		<div class="search-form__inner">
+					<div class="micro">
+				<p class="micro mb-">想要找点什么呢？</p>
+				<i class="iconfont icon-search"></i>
+				<input class="text-input" type="search" name="s" placeholder="搜索" required>
+			</div>
+				</div>
+		<div class="search_close"></div>
+	</form>
+	<!-- search end -->
+<script type='text/javascript' src='https://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.8/assets/Emojify.js/js/emojify.min.js?ver=10.0.8'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.3.2/cdn/js/lib.min.js?ver=3.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Poi = {"pjax":"","movies":"close","windowheight":"auto","codelamp":"close","ajaxurl":"http:\/\/47.107.246.149:8082\/wp-admin\/admin-ajax.php","order":"asc","formpostion":"bottom","reply_link_version":"new","api":"http:\/\/47.107.246.149:8082\/index.php\/wp-json\/","nonce":"f6cba90ced"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/mashirozx/Sakura@3.3.2/js/sakura-app.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/github-cards/latest/widget.js?ver=3.3.2'></script>
+<script type='text/javascript' src='http://47.107.246.149:8082/wp-includes/js/wp-embed.min.js?ver=5.3'></script>
+		<script type="text/javascript">
+            window.onload = function () {
+                emojify.setConfig({
+                    img_dir: "https://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.8/assets/Emojify.js/images/basic",//前端emoji资源地址
+                    blacklist: {
+                        'ids': [],
+                        'classes': ['no-emojify'],
+                        'elements': ['^script$', '^textarea$', '^pre$', '^code$']
+                    }
+                });
+                emojify.run();
+            }
+		</script>
+		<div class="changeSkin-gear no-select" style="bottom: -999px;">
+    <div class="keys">
+        <span id="open-skinMenu">
+		<i class="iconfont icon-gear inline-block rotating"></i>&nbsp; 切换主题 | SCHEME TOOL 
+        </span>
+    </div>
+</div>
+<div class="skin-menu no-select">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg">
+                <i class="fa fa-television" aria-hidden="true"></i>
+            </li><!--Default-->
+            <li id="sakura-bg">
+                <i class="iconfont icon-sakura"></i>
+            </li><!--Sakura-->
+            <li id="gribs-bg">
+                <i class="fa fa-slack" aria-hidden="true"></i>
+            </li><!--Grids-->
+            <li id="KAdots-bg">
+                <i class="iconfont icon-dots"></i>
+            </li><!--Dots-->
+            <li id="totem-bg">
+                <i class="fa fa-superpowers" aria-hidden="true"></i>
+            </li><!--Orange-->
+            <li id="pixiv-bg">
+                <i class="iconfont icon-pixiv"></i>
+            </li><!--Start-->
+            <li id="bing-bg">
+                <i class="iconfont icon-bing"></i>
+            </li><!--Bing-->
+            <li id="dark-bg">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+            </li><!--Night-->
+        </ul>
+    </div>
+    <div class="font-family-controls row-container">
+        <button type="button" class="control-btn-serif selected" data-mode="serif" 
+                onclick="mashiro_global.font_control.change_font()">Serif</button>
+        <button type="button" class="control-btn-sans-serif" data-mode="sans-serif" 
+                onclick="mashiro_global.font_control.change_font()">Sans Serif</button>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+    <div id="aplayer-float" style="z-index: 100;"
+	    class="aplayer"
+        data-id="2288037900"
+        data-server="netease"
+        data-type="playlist"
+        data-fixed="true"
+        data-theme="orange">
+    </div>
+    <style>.skin-menu{left:auto;right:10px;}.changeSkin-gear{left:auto;right:5px;}</style>
+</script>
+</body>
+</html>
