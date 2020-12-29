@@ -1,23 +1,18 @@
 import requests
 import re
+import json
 # 1.获取页面
-link = "http://47.107.246.149:8082/"
-headers = {'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'}
+link = "https://haokan.baidu.com/videoui/api/videorec?tab=gaoxiao&act=pcFeed&pd=pc&num=20&shuaxin_id=1589679325686"
+headers = {
+            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+            'Cookie':'BAIDUID=CB58B94FB5DBD1B74D5D8DCE09D0FBD6:FG=1; BIDUPSID=CB58B94FB5DBD1B74D5D8DCE09D0FBD6; PSTM=1589962929; BDUSS=G1BZUQ3Rmk4eVNMQXF5fmZCY0xCRXlSY2JxSmxYZ2RyVWlhSVJSSUZxdWdiWTVmSVFBQUFBJCQAAAAAAAAAAAEAAACwSoMjejExMjM2NDA3MzQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKDgZl-g4GZfb; BDUSS_BFESS=G1BZUQ3Rmk4eVNMQXF5fmZCY0xCRXlSY2JxSmxYZ2RyVWlhSVJSSUZxdWdiWTVmSVFBQUFBJCQAAAAAAAAAAAEAAACwSoMjejExMjM2NDA3MzQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKDgZl-g4GZfb; H_WISE_SIDS=148078_145999_153765_158076_150967_157008_156814_156287_154259_148867_154738_153243_153716_158957_154172_150772_151016_151493_156388_153065_156516_127969_154413_154174_155962_152982_158528_150346_155803_146732_131423_155885_114550_158982_157965_107316_158055_154190_155344_155255_158024_157790_144966_154212_157815_139883_158640_155530_156726_157188_158367_157163_158589_157697_154639_154357_158686_110085_157006; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; yjs_js_security_passport=4fc280613bd69ae7d997df79b93c1e2a8b01f4dd_1608791054_js; __yjs_duid=1_9173886b7855e0dacc9180f20cd7d4921608807200940; H_PS_PSSID=1443_33355_33306_33235_31254_32974_33351_33313_33312_33311_33310_2453_33163_33309_33308_33307_33238_22159_33389_33370; BA_HECTOR=000h0g00258la585cc1fu8t960q; delPer=0; PSINO=3; BAIDUID_BFESS=CB58B94FB5DBD1B74D5D8DCE09D0FBD6:FG=1; ab_sr=1.0.0_NDMwZGRhZmI3ZTBhMTBjMGNmMmY3MTUyYzZlZmY1YjYxNTcxODU2NWY1Mzc1MTYwNDcyY2VlN2EwNGQ1NDkyOWExNzgzOGRiOGE5NGU2NmUyOTViNWZlZjViNWQxZjIy'
+}
 r = requests.get(link, headers=headers)
-# print(r.text)  # 打印了整个页面HTML源码
-
-# 2.提取需要的数据
-from bs4 import BeautifulSoup  # 从bs4这个库中导入BeautifulSoup
-soup = BeautifulSoup(r.text, "html.parser")  # 使用BeautifulSoup解析这段代码
-div=soup.find_all('div',class_='post-content-wrap')
-#print(h1_item)
-findTitle=re.compile('<h3>(.*?)</h3>')
-
-for i in div:
-    j=re.findall(findTitle,str(i))
-    for k in j:
-        print(k)
-# 3.存储数据
-# with open('title_test.txt', "a+") as f:
-#     f.write(title)
-#     f.close()
+data=r.text
+print(data)
+json_data=json.loads(data)
+data_list=json_data['data']['response']['videos']
+for i in data_list:
+    video_title=data['title']+'.mp4'
+    video_url=data['play_ur;']
+    print(video_title,video_url)
